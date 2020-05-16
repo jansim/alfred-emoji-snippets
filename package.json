@@ -1,7 +1,7 @@
 {
   "name": "alfred-emoji-snippets",
   "version": "1.0.0",
-  "description": "",
+  "description": "A node.js script to easily generate up-to-date snippets for Alfred to quickly find and paste emojis",
   "main": "index.js",
   "scripts": {
     "build": "node index.js",
