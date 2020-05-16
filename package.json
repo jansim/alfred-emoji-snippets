@@ -1,0 +1,17 @@
+{
+  "name": "alfred-emoji-snippets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "github.com/jansim",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^4.0.1",
+    "emojibase-data": "^5.0.1",
+    "uuid": "^8.0.0"
+  }
+}
