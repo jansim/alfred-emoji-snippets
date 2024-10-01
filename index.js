@@ -22,13 +22,14 @@ let num_emojis = 0
 emojis.forEach(entry => {
   const uid = uuidv4()
   const filename = `${uid}_${entry.emoji}.json`
-  const shortcodes = entry.shortcodes.map(x => `:${x}:`).join(' ')
+  const tags = entry.tags || []
+  const shortcodes = tags.map(x => `:${x}:`)
   const snippet = {
     'alfredsnippet': {
       uid,
       'snippet': entry.emoji,
-      'name': `${entry.emoji} ${shortcodes} (${entry.annotation})`,
-      'keyword': `${shortcodes} (${entry.tags.join(' ')})`
+      'name': `${entry.emoji} ${shortcodes.join(' ')} (${entry.label})`,
+      'keyword': `${shortcodes.join(' ')} (${tags.join(' ')})`
     }
   }
 
@@ -37,7 +38,7 @@ emojis.forEach(entry => {
 
     num_emojis++
   } catch (error) {
-    console.error(`An error occured when trying to write the file for emoji ${entry.emoji} (${entry.annotation}). Maybe this emoji is not yet supported?`)
+    console.error(`An error occured when trying to write the file for emoji ${entry.emoji} (${entry.label}). Maybe this emoji is not yet supported?`)
   }
 })
 

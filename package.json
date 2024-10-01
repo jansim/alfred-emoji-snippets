@@ -1,6 +1,6 @@
 {
   "name": "alfred-emoji-snippets",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A node.js script to easily generate up-to-date snippets for Alfred to quickly find and paste emojis",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "archiver": "^4.0.1",
-    "emojibase-data": "^5.0.1",
+    "emojibase-data": "^15.3.2",
     "uuid": "^8.0.0"
   }
 }
